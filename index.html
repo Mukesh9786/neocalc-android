@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>NeoCalc - Premium Android Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/neocalc-android/manifest.json">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="apple-touch-icon" href="icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
@@ -22,22 +22,22 @@
                 <button class="btn func" onclick="deleteLast()">DEL</button>
                 <button class="btn func" onclick="appendOperator('%')">%</button>
                 <button class="btn oper" onclick="appendOperator('/')">÷</button>
-                
+
                 <button class="btn" onclick="appendNumber('7')">7</button>
                 <button class="btn" onclick="appendNumber('8')">8</button>
                 <button class="btn" onclick="appendNumber('9')">9</button>
                 <button class="btn oper" onclick="appendOperator('*')">×</button>
-                
+
                 <button class="btn" onclick="appendNumber('4')">4</button>
                 <button class="btn" onclick="appendNumber('5')">5</button>
                 <button class="btn" onclick="appendNumber('6')">6</button>
                 <button class="btn oper" onclick="appendOperator('-')">-</button>
-                
+
                 <button class="btn" onclick="appendNumber('1')">1</button>
                 <button class="btn" onclick="appendNumber('2')">2</button>
                 <button class="btn" onclick="appendNumber('3')">3</button>
                 <button class="btn oper" onclick="appendOperator('+')">+</button>
-                
+
                 <button class="btn span-2" onclick="appendNumber('0')">0</button>
                 <button class="btn" onclick="appendNumber('.')">.</button>
                 <button class="btn equal" onclick="calculate()">=</button>
@@ -45,14 +45,12 @@
         </div>
     </div>
     <script src="script.js"></script>
-
-    <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/neocalc-android/sw.js')
-            .then(() => console.log('SW registered ✅'))
-            .catch(err => console.log('SW failed ❌:', err));
+            .then(r => console.log('✅ SW Registered:', r.scope))
+            .catch(e => console.log('❌ SW Error:', e));
         });
       }
     </script>
