@@ -45,5 +45,16 @@
         </div>
     </div>
     <script src="script.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/neocalc-android/sw.js')
+            .then(() => console.log('SW registered ✅'))
+            .catch(err => console.log('SW failed ❌:', err));
+        });
+      }
+    </script>
 </body>
 </html>
