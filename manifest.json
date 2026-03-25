@@ -1,6 +1,7 @@
 {
   "name": "NeoCalc - Premium Calculator",
   "short_name": "NeoCalc",
+  "description": "A premium Android calculator with clean UI",
   "start_url": "/neocalc-android/",
   "scope": "/neocalc-android/",
   "display": "standalone",
@@ -10,15 +11,23 @@
   "icons": [
     {
       "src": "icon.png",
-      "sizes": "192x192",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow"
     },
     {
       "src": "icon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "form_factor": "wide"
     }
   ]
 }
